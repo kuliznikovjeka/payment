@@ -1,0 +1,308 @@
+@import "nullstyle.scss";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,200italic,italic&display=swap");
+
+// цвета
+$whiteColor: #fff;
+$blackColor: #0e1028;
+$dark-blackColor: #0a0c1d;
+$blueColor: #3e4194;
+$hoverRedColor: #ff464f;
+// цвета
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	color: $blackColor;
+}
+[class*="__container"] {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.header {
+	background: $blackColor;
+	// .header__container
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 60px;
+		padding: 10px 15px;
+		@media (max-width: 992px) {
+			justify-content: start;
+		}
+	}
+
+	&__logo-mobile {
+		z-index: 10;
+		width: 165px;
+		img {
+			max-width: 100%;
+		}
+		display: none;
+		@media (max-width: 992px) {
+			display: block;
+			margin-right: auto;
+		}
+	}
+
+	// .header__menu
+
+	&__menu {
+		&:not(:last-child) {
+			margin-right: 78px;
+		}
+		@media (max-width: 1080px) {
+			&:not(:last-child) {
+				margin-right: 36px;
+			}
+		}
+	}
+
+	// .header__actions
+
+	&__actions {
+		&_pc {
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
+	}
+}
+.menu {
+	// .menu__body
+
+	&__body {
+		@media (max-width: 992px) {
+			z-index: 2;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: -100%;
+			left: 0;
+			background: $blackColor;
+			padding: 130px 30px 30px 30px;
+			transition: all 0.3s ease 0s;
+			overflow: auto;
+			&::before {
+				content: "";
+				z-index: 2;
+				position: fixed;
+				width: 100%;
+				top: -100%;
+				left: 0;
+				height: 85px;
+				background: $dark-blackColor;
+				z-index: 2;
+				transition: all 0.3s ease 0s;
+				@media (max-width: 992px) {
+					height: 80px;
+				}
+			}
+			&._active {
+				top: 0;
+				&::before {
+					content: "";
+					top: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+
+	&__list {
+		@media (min-width: 993px) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 36px;
+		}
+		display: block;
+		text-align: center;
+	}
+
+	// .menu__item
+
+	&__item {
+		&_logo {
+			padding: 0 68px;
+			@media (max-width: 1080px) {
+				padding: 0px;
+			}
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
+		@media (max-width: 992px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		color: $whiteColor;
+		font-weight: 700;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hoverRedColor;
+			}
+		}
+		@media (max-width: 992px) {
+			font-size: 30px;
+		}
+	}
+}
+.actions-header {
+	// .actions-header__dropdown
+
+	&__dropdown {
+		min-width: 45px;
+		position: relative;
+	}
+
+	// .actions-header__select
+
+	&__select {
+		display: flex;
+		gap: 6px;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	// .actions-header__selected
+
+	&__selected {
+		color: $blueColor;
+		font-weight: 600;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hoverRedColor;
+			}
+		}
+	}
+
+	// .actions-header__caret
+
+	&__caret {
+		fill: $blueColor;
+		transition:
+			fill,
+			transform 0.3s ease 0s;
+		&.caret-rotate {
+			transform: rotate(180deg);
+		}
+		@media (any-hover: hover) {
+			transition: fill 0.3s ease 0s;
+			&:hover {
+				fill: $hoverRedColor;
+			}
+		}
+	}
+
+	// .actions-header__menu-list
+
+	&__menu-list {
+		padding: 10px 5px;
+		background: $blackColor;
+		// box-shadow: 0 0 0.8em 1em rgba(0, 0, 0, 0.2);
+		border-radius: 4px;
+		color: rgb(255, 255, 255);
+		position: absolute;
+		top: 22px;
+		left: 43%;
+		width: 100%;
+		transform: translateX(-43%);
+		opacity: 0;
+		display: none;
+		transition: 0.3s;
+		z-index: 1;
+		&.menu-open {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	// .actions-header__menu-item
+
+	&__menu-item {
+		padding: 3px 5px;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		&:not(:last-child) {
+			margin-bottom: 18px;
+		}
+		&.active {
+			background: $blueColor;
+			@media (any-hover: hover) {
+				&:hover {
+					background: $hoverRedColor;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: 992px) {
+		background: transparent;
+		padding: 11px;
+		display: block;
+		position: relative;
+		width: 30px;
+		flex: 0 0 30px;
+		height: 18px;
+		z-index: 5;
+		cursor: pointer;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: 4px;
+			border-radius: 3px;
+			background-color: $whiteColor;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(46% - 1px);
+		}
+		&._active {
+			span {
+				width: 0px;
+			}
+			&::before {
+				top: calc(50% - 0.5px);
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - 3px);
+				transform: rotate(45deg);
+			}
+		}
+	}
+	margin-left: 15px;
+}
