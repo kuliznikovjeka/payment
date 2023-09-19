@@ -825,6 +825,12 @@ body {
   padding: 70px 0;
 }
 
+@media (max-width: 767px) {
+  .why-us {
+    padding: 50px 0;
+  }
+}
+
 .why-us__title {
   text-align: center;
 }
@@ -1058,4 +1064,121 @@ body {
   height: 32px;
   top: 25%;
   right: 8%;
+}
+
+.partners {
+  padding: 70px 0;
+}
+
+@media (max-width: 767px) {
+  .partners {
+    padding: 25px 0 50px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 10px;
+  }
+}
+
+.partners__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 481px) {
+  .partners__row:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners__row {
+    gap: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.partners__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .partners__item {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners__item {
+    width: 65px;
+  }
+}
+
+.partners__item img {
+  max-width: 100%;
+}
+
+.partners__item:nth-child(2), .partners__item:nth-child(4) {
+  background-color: #f9f7f6;
+  padding: 20px;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 480px) {
+  .partners__item:nth-child(2), .partners__item:nth-child(4) {
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.partners__title {
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .partners__title_pc {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) {
+  .partners__title_mob {
+    display: none;
+  }
 }

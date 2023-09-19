@@ -1,23 +1,4 @@
 'use strict';
-// ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР
-// const header = document.querySelector('.header');
-// const ai = document.querySelector('.ai');
-// const hederHeight = header.offsetHeight;
-// const aiHeight = ai.offsetHeight;
-
-// window.addEventListener('scroll', () => {
-// 	let scrollDistance = window.scrollY;
-// 	console.log(scrollDistance);
-
-// 	if (scrollDistance >= aiHeight - 50) {
-// 		header.classList.add('header__fixed');
-// 		ai.style.marginTop = `${hederHeight}px`;
-// 	} else {
-// 		header.classList.remove('header__fixed');
-// 		ai.style.marginTop = null;
-// 	}
-// });
-// ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР
 
 // ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ
 const iconMenu = document.querySelector('.icon-menu');
@@ -96,7 +77,7 @@ const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll);
-	function animOnScroll(params) {
+	function animOnScroll() {
 		for (let index = 0; index < animItems.length; index++) {
 			const animItem = animItems[index];
 			const animItemHeight = animItem.offsetHeight;
