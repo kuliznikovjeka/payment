@@ -5,18 +5,18 @@
 // const hederHeight = header.offsetHeight;
 // const aiHeight = ai.offsetHeight;
 
-window.addEventListener('scroll', () => {
-	let scrollDistance = window.scrollY;
-	console.log(scrollDistance);
+// window.addEventListener('scroll', () => {
+// 	let scrollDistance = window.scrollY;
+// 	console.log(scrollDistance);
 
-	if (scrollDistance >= aiHeight - 50) {
-		header.classList.add('header__fixed');
-		ai.style.marginTop = `${hederHeight}px`;
-	} else {
-		header.classList.remove('header__fixed');
-		ai.style.marginTop = null;
-	}
-});
+// 	if (scrollDistance >= aiHeight - 50) {
+// 		header.classList.add('header__fixed');
+// 		ai.style.marginTop = `${hederHeight}px`;
+// 	} else {
+// 		header.classList.remove('header__fixed');
+// 		ai.style.marginTop = null;
+// 	}
+// });
 // ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР ДВИЖУЩИЙСЯ ХЕДЕР
 
 // ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ ПЛАВНЫЙ СКРОЛЛ + ЗАКРЫВАЮЩЕЕСЯ БУРГЕР МЕНЮ
