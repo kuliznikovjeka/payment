@@ -321,10 +321,7 @@ $hoverRedColor: #ff464f;
 		&::before,
 		&::after {
 			content: "";
-			transition:
-				top 0.3s ease 0s,
-				transform 0.3s ease 0s,
-				bottom 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
 			right: 0;
 			position: absolute;
 			width: 100%;
@@ -547,9 +544,6 @@ $hoverRedColor: #ff464f;
 
 	&__icon {
 		background: (linear-gradient(273deg, #950b12 2.78%, #e2373f 102.26%));
-		filter: drop-shadow(0px 0px 0px rgba(50, 54, 78, 0.1)) drop-shadow(0px 3px 7px rgba(50, 54, 78, 0.1))
-			drop-shadow(0px 13px 13px rgba(50, 54, 78, 0.09)) drop-shadow(0px 29px 18px rgba(50, 54, 78, 0.05))
-			drop-shadow(0px 52px 21px rgba(50, 54, 78, 0.01)) drop-shadow(0px 81px 23px rgba(50, 54, 78, 0));
 		border-radius: 100%;
 		display: flex;
 		justify-content: center;
@@ -709,9 +703,6 @@ $hoverRedColor: #ff464f;
 
 	&__icon {
 		background: (linear-gradient(18deg, #2e1a8a -13.63%, #000c4e 108.15%));
-		filter: drop-shadow(0px 0px 0px rgba(32, 38, 49, 0.1)) drop-shadow(0px 2px 5px rgba(32, 38, 49, 0.1))
-			drop-shadow(0px 8px 8px rgba(32, 38, 49, 0.09)) drop-shadow(0px 18px 11px rgba(32, 38, 49, 0.05))
-			drop-shadow(0px 33px 13px rgba(32, 38, 49, 0.01)) drop-shadow(0px 51px 14px rgba(32, 38, 49, 0));
 		padding: 50px;
 		border-radius: 100%;
 		width: 160px;
