@@ -30,7 +30,6 @@ document.querySelectorAll('a[href*="#"]').forEach(link => {
 			document.body.classList.remove('_lock');
 			menuBody.classList.remove('_active');
 			iconMenu.classList.remove('_active');
-
 		}
 
 		window.scrollBy({

@@ -246,8 +246,8 @@ body._lock {
     left: 0;
     background: #0e1028;
     padding: 130px 30px 30px 30px;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: top 0.3s ease 0s;
+    transition: top 0.3s ease 0s;
     overflow: auto;
   }
   .menu__body::before {
@@ -260,8 +260,8 @@ body._lock {
     height: 85px;
     background: #0a0c1d;
     z-index: 2;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: top 0.3s ease 0s;
+    transition: top 0.3s ease 0s;
   }
 }
 
@@ -421,8 +421,8 @@ body._lock {
   padding: 3px 5px;
   border-radius: 4px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s, color 0.3s ease 0s;
+  transition: background 0.3s ease 0s, color 0.3s ease 0s;
 }
 
 .actions-header__menu-item:not(:last-child) {
@@ -461,8 +461,10 @@ body._lock {
   }
   .icon-menu span, .icon-menu::before, .icon-menu::after {
     content: "";
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: top 0.3s ease 0s, bottom 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+    transition: top 0.3s ease 0s, bottom 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+    transition: top 0.3s ease 0s, transform 0.3s ease 0s, bottom 0.3s ease 0s;
+    transition: top 0.3s ease 0s, transform 0.3s ease 0s, bottom 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
     right: 0;
     position: absolute;
     width: 100%;

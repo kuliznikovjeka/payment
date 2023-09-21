@@ -137,7 +137,7 @@ $hoverRedColor: #ff464f;
 			left: 0;
 			background: $blackColor;
 			padding: 130px 30px 30px 30px;
-			transition: all 0.3s ease 0s;
+			transition: top 0.3s ease 0s;
 			overflow: auto;
 			&::before {
 				content: "";
@@ -149,7 +149,7 @@ $hoverRedColor: #ff464f;
 				height: 85px;
 				background: $dark-blackColor;
 				z-index: 2;
-				transition: all 0.3s ease 0s;
+				transition: top 0.3s ease 0s;
 				@media (max-width: 992px) {
 					height: 80px;
 				}
@@ -287,7 +287,9 @@ $hoverRedColor: #ff464f;
 		padding: 3px 5px;
 		border-radius: 4px;
 		cursor: pointer;
-		transition: all 0.3s ease 0s;
+		transition:
+			background 0.3s ease 0s,
+			color 0.3s ease 0s;
 		&:not(:last-child) {
 			margin-bottom: 18px;
 		}
@@ -319,7 +321,10 @@ $hoverRedColor: #ff464f;
 		&::before,
 		&::after {
 			content: "";
-			transition: all 0.3s ease 0s;
+			transition:
+				top 0.3s ease 0s,
+				transform 0.3s ease 0s,
+				bottom 0.3s ease 0s;
 			right: 0;
 			position: absolute;
 			width: 100%;
