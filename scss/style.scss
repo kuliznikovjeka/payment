@@ -1,22 +1,24 @@
 @import "nullstyle.scss";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,200italic,italic&display=swap");
 
+$blackColor: #0e1028;
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	color: $blackColor;
+	&._lock {
+		overflow: hidden;
+	}
+}
 // цвета
 $whiteColor: #fff;
 $mainColor: #000;
-$blackColor: #0e1028;
 $greyColor: #4f4f4f;
 $dark-blackColor: #0a0c1d;
 $blueColor: #3e4194;
 $redColor: #ab2424;
 $hoverRedColor: #ff464f;
 // цвета
-
-body {
-	font-family: "Montserrat", sans-serif;
-	font-size: 20px;
-	color: $blackColor;
-}
 [class*="__container"] {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -85,24 +87,16 @@ body {
 	&__container {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		min-height: 60px;
 		padding: 10px 15px;
-		@media (max-width: 992px) {
-			justify-content: start;
-		}
 	}
 
-	&__logo-mobile {
+	&__logo {
 		z-index: 10;
-		width: 165px;
+		flex: 1 1 auto;
+		margin-right: 10px;
 		img {
 			max-width: 100%;
-		}
-		display: none;
-		@media (max-width: 992px) {
-			display: block;
-			margin-right: auto;
 		}
 	}
 
@@ -122,6 +116,7 @@ body {
 	// .header__actions
 
 	&__actions {
+		z-index: 10;
 		&_pc {
 			@media (max-width: 992px) {
 				display: none;
